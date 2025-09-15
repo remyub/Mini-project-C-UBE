@@ -2,11 +2,11 @@
 
 int main() 
 {
-    float a=0;
-    float b=0;
+    int a=0;
+    int b=0;
     printf("saisir deux nombres ");
-    scanf("%f", &a);
-    scanf("%f", &b);
-    printf("la somme de ces deux nombres est %f",(a+b));
+    scanf("%d", &a);
+    scanf("%d", &b);
+    printf("la somme de ces deux nombres est %d",(a+b));
     return 0;
 }
