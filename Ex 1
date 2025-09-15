@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() 
+{
+    float a=0;
+    float b=0;
+    printf("saisir deux nombres ");
+    scanf("%f", &a);
+    scanf("%f", &b);
+    printf("la somme de ces deux nombres est %f",(a+b));
+    return 0;
+}
