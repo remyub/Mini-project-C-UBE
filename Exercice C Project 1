@@ -1,0 +1,77 @@
+1)
+
+#include <stdio.h>
+
+int main() 
+{
+    int a=0;
+    int b=0;
+    printf("saisir deux nombres ");
+    scanf("%d", &a);
+    scanf("%d", &b);
+    printf("la somme de ces deux nombres est %d",(a+b));
+    return 0;
+}
+
+2)
+
+#include <stdio.h>
+
+int main(void) 
+{
+    int a=0;
+    printf("Choisir le menu :\n 1 : addition\n 2 : soustraction\n 3 : multiplication\n 4 : division entiere\n");
+    scanf("%d", &a);
+
+    int b=0;
+    int c=0;
+    printf("Donner deux nombres : ");
+    scanf("%d", &b);
+    scanf("%d", &c);
+    if (a==1)
+        printf("Le resultat est : %d\n", b+c);
+    else if (a==2)
+        printf("Le resultat est : %d\n", b-c);
+    else if (a==3)
+        printf("Le resultat est : %d\n", b*c);
+    else if (a==4 && c!=0)
+        printf("Le resultat est : %d\n", b/c);
+    else
+        printf("Erreur : choix invalide, recommencez.\n");
+
+    return 0;
+}
+
+3)
+
+#include <stdio.h>
+
+int main(void) 
+{
+    int a=1;
+    while (a!=0)
+    {
+    printf("Choisir le menu :\n 1 : addition\n 2 : soustraction\n 3 : multiplication\n 4 : division entiere\n 0 : arret\n");
+    scanf("%d", &a);
+
+    int b=0;
+    int c=0;
+    printf("Donner deux nombres : ");
+    scanf("%d", &b);
+    scanf("%d", &c);
+
+    if (a==1)
+        printf("Le resultat est : %d\n", b+c);
+    else if (a==2)
+        printf("Le resultat est : %d\n", b-c);
+    else if (a==3)
+        printf("Le resultat est : %d\n", b*c);
+    else if (a==4 && c!=0)
+        printf("Le resultat est : %d\n", b/c);
+    else
+        printf("Erreur : choix invalide, recommencez.\n");
+    }
+    return 0;
+}
+
+
