@@ -1,0 +1,101 @@
+1)
+
+#include <stdio.h>
+
+int main() 
+{
+    int n0=5;
+    int n=0;
+    printf("saisir le nombre a comparer \n");
+    scanf("%d",&n);
+    while (n!=n0)
+    {
+       if (n<n0)
+           printf("trop petit \n");
+        else if (n>n0)
+           printf("trop grand \n");
+    printf("saisir un autre nombre a comparer \n");
+    scanf("%d",&n);
+    }    
+    printf("Bravo \n");
+    
+    return 0;
+}
+
+2)
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() 
+{
+    srand(time(NULL));
+    int n0=(rand() % 100) + 1;
+    int n=0;
+    int i=1;
+    printf("saisir le nombre a comparer \n");
+    scanf("%d",&n);
+    while (n!=n0)
+    {
+       if (n<n0)
+           printf("trop petit \n");
+        else if (n>n0)
+           printf("trop grand \n");
+    printf("saisir un autre nombre a comparer \n");
+    scanf("%d",&n);
+    i=i+1;
+    }    
+    printf("Bravo, ton nombre d'essai est de %d \n", i);
+    
+    return 0;
+}
+
+3)
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() 
+{
+    int r=1;
+    while (r==1)
+    {
+    int d=0;
+    int n0;
+    int n;
+    int i;
+    int m=0;
+    printf("Bienvenue dans devine le nombre, choissisez une difficulté puis devinez le nombre de l'intervalle choisie : \n 1 : facile (1-50), \n 2 : moyen (1-100), \n 3 : difficile (1-500) \n");
+    scanf("%d", &d);
+    
+    if (d==1)
+        m=50;
+    else if (d==2)
+        m=100;
+    else if (d==3)
+        m=500;
+    
+    srand(time(NULL));
+    n0=(rand() % m) + 1;
+    n=0;
+    i=1;
+    printf("saisir le nombre a comparer \n");
+    scanf("%d",&n);
+    while (n!=n0)
+    {
+        if (n<n0)
+            printf("trop petit \n");
+        else if (n>n0)
+            printf("trop grand \n");
+    printf("saisir un autre nombre a comparer \n");
+    scanf("%d",&n);
+    i=i+1;
+    }    
+    printf("Bravo, ton nombre d'essai est de %d \n", i);
+    printf("pour rejouer saisir 1 et pour arreter saisir 0 \n");
+    scanf("%d",&r);
+    }
+    return 0;
+}
