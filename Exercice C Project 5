@@ -1,0 +1,20 @@
+1)
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void comptecaractere(char* phrase, int n){
+    fgets(phrase, n, stdin);
+    int p=strlen(phrase);
+    printf("Le nombre de caractère dans la phrase entrée est %d \n",p-1);
+}
+
+int main(){
+    int n=100;
+    char phrase[n];
+    printf("Saisir une phrase : \n");
+    comptecaractere(phrase, n);
+}
+
+
