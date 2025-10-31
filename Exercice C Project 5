@@ -46,4 +46,50 @@ int main(){
     return 0;
 }
 
+3) 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void palindrome(char* phrase, int n){
+    fgets(phrase, n, stdin);
+    int p=strlen(phrase);
+    if (p>0 && phrase[p-1]=='\n') {
+        phrase[p-1]='\0';
+        p--;
+    }
+    int k=0;
+    for(int i=0; i<p; i++){
+        char c=phrase[i];
+        if(c>='A' && c<='Z'){
+            c=c+32;
+        }
+        if(c!=' '){
+            phrase[k]=c; 
+            k++;
+        }
+    } 
+    phrase[k]='\0';
+    p=k;
+    int a=0;
+    for (int i=0; i<p/2; i++){
+        if (phrase[i] !=phrase[p-1-i]){
+            a=1;
+        }
+    }
+    if (a==0){
+        printf("La phrase est un palindrome \n");
+    }
+    else{
+        printf("La phrase n'est pas un palindrome \n");
+    }
+}
+int main(){
+    int n=100;
+    char phrase[n];
+    printf("Saisir une phrase : \n");
+    palindrome(phrase, n);
+    return 0;
+}
 
